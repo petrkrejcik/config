@@ -1,7 +1,7 @@
 
 export NVM_DIR="/Users/pedro/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-export HERA_VERSION_PREFIX=nestereo
+export HERA_VERSION_PREFIX=krejcikp
 ulimit -n 8192
 
 parse_git_branch() {
@@ -47,7 +47,7 @@ romaws() {
 }
 
 # Tvrdim.cz
-alias sshtvrdim="ssh app@alpha-node-2.rosti.cz -p 10903"
+alias sshtvrdim="ssh app@alpha-node-8.rosti.cz -p 10903"
 
 
 # Git autocompletition
@@ -68,3 +68,9 @@ alias mod='DEBUG=test* mo'
 alias mold='cdbt ; DEBUG=test* moll'
 alias mobd='cdbt ; DEBUG=test* mobb'
 alias motd='cdbtt ; DEBUG=test* mott' 
+
+export PGDATA='/Users/pedro/postgre'
+
+# Arcanist
+export PATH=$PATH:/Users/pedro/lib/arcanist/arcanist/bin
+
