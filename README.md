@@ -4,3 +4,5 @@
 
 # Bash
 `ln -s ~/www/config/.bash_profile ~/`
+
+# Apptivate
