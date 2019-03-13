@@ -1,0 +1,30 @@
+[user]
+	name = Petr Krejčík
+	email = petr.krejcik@socialbakers.com
+[alias]
+  co    = checkout
+  ss    = status
+  s   = !echo git status -sb && git status -sb
+  f   = fetch
+  pullr   = !echo git pull --rebase && git pull --rebase
+  tree    = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(blue)<%cr %an>%Creset' --abbrev-commit --date=relative
+  d   = diff --cached
+  unp   = log @{u}..HEAD --oneline
+  l   = log --pretty=format:'%h%x09%an%x09%x09%ad:%Cgreen %s'
+  sp    = !"git stash save --include-untracked && git pull --rebase --prune && git stash pop --index" # forcely pull (stash, pull, unstash)
+  stashpullr  = !"git stash save --include-untracked && git pull --rebase --prune && git stash pop --index" # forcely pull (stash, pull, unstash)
+  cost    = stash save &&
+  gb = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset) %C(white)%s%C(reset) %C(bold white)- %an%C(reset)'
+[push]
+  default = simple
+
+[core]
+	excludesfile = /Users/petr.krejcik/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/petr.krejcik/.stCommitMsg

@@ -1,76 +1,117 @@
+######################### PATH - START #########################
+# Java
+export JAVA_HOME="/usr/local"
 
-export NVM_DIR="/Users/pedro/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# eslint
+export PATH="/Users/petr.krejcik/.nvm/versions/node/v8.5.0/bin/eslint:$PATH"
+
+# GDAL
+export PATH="/Library/Frameworks/GDAL.framework/Programs:$PATH"
+
+# Phabricator
+export PATH="$HOME/www/sbks/phabricator/arcanist/bin:$PATH"
+
+# MacPorts Installer addition on 2018-01-27_at_18:36:51: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
+# Node
+export PATH="/Users/petr.krejcik/.nvm/versions/node/v10.12.0/bin/node:$PATH"
+
+# /usr/local
+export PATH="/usr/local/bin/:$PATH"
+
+######################### PATH - END #########################
+######################### SBKS - START #########################
+
 export HERA_VERSION_PREFIX=krejcikp
-ulimit -n 8192
+
+# dev ACL
+export NODE_EXTRA_CA_CERTS=/Users/petr.krejcik/Documents/SBKSAdminCA.pem
+
+export MARATONEC_TOKEN="9qfsYxapTnhzGqNN2FTp"
+
+######################### SBKS - END #########################
+
+
+
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-
-
-# jak vypada konzole, na konci ma git vetev
-#export PS1="\e[0;32m\[\u@\W\e[m \e[1;32m\$(parse_git_branch)\e[m: "
-
 COL0="\[\033[0m\]"
 COL1="\[\033[0;33m\]"
 COL2="\[\033[1;33m\]"
 export PS1="$COL1\w $COL2\$(parse_git_branch)$COL0: "
-#export PS1="$COL1\u@\h:\w $COL2\$(parse_git_branch)$COL0: "
 
 alias ll="ls -l"
 alias lla="ls -la"
 alias g="git"
-alias cdaf="cd ~/www/analytics-frontend"
-alias cdbf="cd ~/www/builder-frontend"
-alias builder="cd ~/www/builder-frontend && gulp watch -c"
-alias chrome="open /Applications/Google\ Chrome.app/ -n --args --disable-web-security"
-#alias chrome="/Applications/Google\\ Chrome\\ Chrome.app/Contents/MacOS/Google\\ Chrome\\ Canary --user-data-dir=/Users/$USER/Library/Application\\ Support/Google/Work --disable-web-security>/dev/null 2>&1 &"
-alias mongostart="mongod --dbpath /mongodb/db/"
-alias mongoconsole="cd /mongodb/bin && mongo"
-alias sandbox="cd ~/www/sandbox && gulp watch -c"
-
-findtextFn() {
-    grep -rnw $1 -e '$2'
-}
-
-
-### Testy romadur ###
-alias romall="romadur test -c localChrome"
-alias sele="selenium-standalone start"
-rom() {
-    romadur test -c localChrome $1 $2
-}
-romaws() {
-    romadur test -c awsFirefox $1 $2
-}
 
 # Tvrdim.cz
-alias sshtvrdim="ssh app@alpha-node-8.rosti.cz -p 10903"
+alias sshtvrdim="ssh app@node-11.rosti.cz -p 10903"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Git autocompletition
-source ~/.git-completion.bash
+###-begin-npm-completion-###
+#
+# npm command completion script
+#
+# Installation: npm completion >> ~/.bashrc  (or ~/.zshrc)
+# Or, maybe: npm completion > /usr/local/etc/bash_completion.d/npm
+#
 
-# Honzovo
-alias cdbt='cd ~/www/builder-test-backend/'
-alias cdbtt='cd ~/www/builder-test-backend/'
-alias mo='mocha --compilers coffee:coffee-script/register --reporter spec --recursive'
-alias mos='mocha --compilers coffee:coffee-script/register --bail --reporter spec --recursive'
-alias moll='BACKEND_SERVER=http://builder.dev.com:5262 mo'
-alias mobb='BACKEND_SERVER=http://builder-api.socialbakers.com mo'
-alias mott='BACKEND_SERVER=http://builder-test.socialbakers.com mo'
-alias mol='cdbt ; moll'
-alias mob='cdbt ; mobb'
-alias mot='cdbtt ; mott'
-alias mod='DEBUG=test* mo'
-alias mold='cdbt ; DEBUG=test* moll'
-alias mobd='cdbt ; DEBUG=test* mobb'
-alias motd='cdbtt ; DEBUG=test* mott' 
+if type complete &>/dev/null; then
+  _npm_completion () {
+    local words cword
+    if type _get_comp_words_by_ref &>/dev/null; then
+      _get_comp_words_by_ref -n = -n @ -n : -w words -i cword
+    else
+      cword="$COMP_CWORD"
+      words=("${COMP_WORDS[@]}")
+    fi
 
-export PGDATA='/Users/pedro/postgre'
-
-# Arcanist
-export PATH=$PATH:/Users/pedro/lib/arcanist/arcanist/bin
-
+    local si="$IFS"
+    IFS=$'\n' COMPREPLY=($(COMP_CWORD="$cword" \
+                           COMP_LINE="$COMP_LINE" \
+                           COMP_POINT="$COMP_POINT" \
+                           npm completion -- "${words[@]}" \
+                           2>/dev/null)) || return $?
+    IFS="$si"
+    if type __ltrim_colon_completions &>/dev/null; then
+      __ltrim_colon_completions "${words[cword]}"
+    fi
+  }
+  complete -o default -F _npm_completion npm
+elif type compdef &>/dev/null; then
+  _npm_completion() {
+    local si=$IFS
+    compadd -- $(COMP_CWORD=$((CURRENT-1)) \
+                 COMP_LINE=$BUFFER \
+                 COMP_POINT=0 \
+                 npm completion -- "${words[@]}" \
+                 2>/dev/null)
+    IFS=$si
+  }
+  compdef _npm_completion npm
+elif type compctl &>/dev/null; then
+  _npm_completion () {
+    local cword line point words si
+    read -Ac words
+    read -cn cword
+    let cword-=1
+    read -l line
+    read -ln point
+    si="$IFS"
+    IFS=$'\n' reply=($(COMP_CWORD="$cword" \
+                       COMP_LINE="$line" \
+                       COMP_POINT="$point" \
+                       npm completion -- "${words[@]}" \
+                       2>/dev/null)) || return $?
+    IFS="$si"
+  }
+  compctl -K _npm_completion npm
+fi
+###-end-npm-completion-###
