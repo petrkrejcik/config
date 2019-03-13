@@ -1,0 +1,59 @@
+{
+	"always_show_minimap_viewport": true,
+	"atomic_save": false,
+	"binary_file_patterns":
+	[
+		"*.html",
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.svg",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip",
+		"node_modules/**",
+		"build/**",
+		"dist/**",
+		"bower_components/**",
+		"vendor/**"
+	],
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"folder_exclude_patterns":
+	[
+		".git"
+	],
+	"font_size": 12,
+	"git_executables": "/usr/local/bin/git",
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"GitGutter",
+		"NX Sublime Coverage",
+		"Vintage",
+		"Web Inspector"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_numbers": false,
+	"paths":
+	{
+		"osx":
+		[
+			"$NVM_BIN"
+		]
+	},
+	"show_definitions": false,
+	"theme": "Adaptive.sublime-theme",
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": "false"
+}
