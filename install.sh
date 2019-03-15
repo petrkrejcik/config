@@ -1,8 +1,17 @@
 #!/bin/sh
 
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
+brew tap caskroom/cask
+brew tap cask-versions
+
+brew install git
+git clone git@github.com:petrkrejcik/config.git
+cd config
+
 apps=(
-	brew
-	git
+	# git
+	# brew
 	macpass
 	# xcode
 	apptivate
