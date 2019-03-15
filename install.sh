@@ -1,16 +1,19 @@
 #!/bin/sh
 
 apps=(
-	dotfiles
 	brew
 	git
 	macpass
 	# xcode
-	nvm
 	apptivate
 	google-chrome
-	npm
+	google-chrome-canary
+	google-backup-and-sync
+	commander-one
 	sublime
+	nvm
+	npm
+	dotfiles
 )
 
 for app in "${apps[@]}"
