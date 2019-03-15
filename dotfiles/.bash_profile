@@ -3,7 +3,7 @@
 export JAVA_HOME="/usr/local"
 
 # eslint
-export PATH="/Users/petr.krejcik/.nvm/versions/node/v8.5.0/bin/eslint:$PATH"
+export PATH="$HOME/.nvm/versions/node/v8.5.0/bin/eslint:$PATH"
 
 # GDAL
 export PATH="/Library/Frameworks/GDAL.framework/Programs:$PATH"
@@ -15,7 +15,7 @@ export PATH="$HOME/www/sbks/phabricator/arcanist/bin:$PATH"
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 # Node
-export PATH="/Users/petr.krejcik/.nvm/versions/node/v10.12.0/bin/node:$PATH"
+export PATH="$HOME/.nvm/versions/node/v10.12.0/bin/node:$PATH"
 
 # /usr/local
 export PATH="/usr/local/bin/:$PATH"
@@ -26,9 +26,9 @@ export PATH="/usr/local/bin/:$PATH"
 export HERA_VERSION_PREFIX=krejcikp
 
 # dev ACL
-export NODE_EXTRA_CA_CERTS=/Users/petr.krejcik/Documents/SBKSAdminCA.pem
+export NODE_EXTRA_CA_CERTS=$HOME/Documents/SBKSAdminCA.pem
 
-export MARATONEC_TOKEN="9qfsYxapTnhzGqNN2FTp"
+test -r $HOME/.credentials && source $HOME/.credentials && echo "$HOME/.credentials loaded"
 
 ######################### SBKS - END #########################
 

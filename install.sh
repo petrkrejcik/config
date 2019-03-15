@@ -1,6 +1,7 @@
 #!/bin/sh
 
 apps=(
+	dotfiles
 	brew
 	git
 	macpass
@@ -9,6 +10,7 @@ apps=(
 	apptivate
 	google-chrome
 	npm
+	sublime
 )
 
 for app in "${apps[@]}"
