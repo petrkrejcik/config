@@ -29,7 +29,7 @@
 	[
 		".git"
 	],
-	"font_size": 12,
+	"font_size": 14,
 	"git_executables": "/usr/local/bin/git",
 	"highlight_line": true,
 	"ignored_packages":
