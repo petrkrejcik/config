@@ -3,10 +3,10 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 brew tap caskroom/cask
-brew tap cask-versions
+brew tap homebrew/cask-versions # invalid tap name
 
 brew install git
-git clone git@github.com:petrkrejcik/config.git
+git clone git://github.com/petrkrejcik/config.git
 cd config
 
 apps=(
