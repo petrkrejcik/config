@@ -8,11 +8,12 @@ brew tap homebrew/cask-versions
 
 # Git
 brew install git
+mkdir www
+cd www
 git clone git://github.com/petrkrejcik/config.git
 cd config
 
 apps=(
-	apptivate
 	commander-one
 	dotfiles
 	git
@@ -29,6 +30,7 @@ apps=(
 	sublime-text
 	viscosity
 	zoomus
+	apptivate # maybe at the end?
 	settings
 	# npm
 )
