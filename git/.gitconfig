@@ -19,7 +19,7 @@
   default = simple
 
 [core]
-	excludesfile = /Users/petr.krejcik/.gitignore_global
+	excludesfile = $HOME/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -27,4 +27,4 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	template = /Users/petr.krejcik/.stCommitMsg
+	template = $HOME/.stCommitMsg
