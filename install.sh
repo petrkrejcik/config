@@ -16,7 +16,7 @@ cd config
 apps=(
 	commander-one
 	dotfiles
-	git
+	git # symlinks
 	google-backup-and-sync
 	google-chrome
 	google-chrome-canary
@@ -31,14 +31,14 @@ apps=(
 	viscosity
 	zoomus
 	apptivate # maybe at the end?
-	settings
+	system
 	# npm
 )
 
 for app in "${apps[@]}"
 do
 	:
-	echo "\n\n\n"
+	echo "\n"
 	echo "Installing '$app'"
-	bash "$app/install.sh"
+	test -r "$app/install.sh" && bash "$app/install.sh"
 done

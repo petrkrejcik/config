@@ -3,6 +3,7 @@
 - remove icons from bottom bar
 - tap without click
 - install sublime packages
+- config repo with perms
 
 ## Restore Time Machine
 - Hold `Command + R` when booting
@@ -32,6 +33,10 @@ curl -s https://raw.githubusercontent.com/petrkrejcik/config/master/install.sh |
 1. Edit `~/.credentials`
 ```sh
 export MARATONEC_TOKEN="xxx"`
+```
+1. Run
+```sh
+$HOME/www/config/setup.sh
 ```
 
 
