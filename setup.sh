@@ -7,6 +7,7 @@ apps=(
 	viscosity
 	nvm
 	git
+	lightshot
 )
 
 for app in "${apps[@]}"

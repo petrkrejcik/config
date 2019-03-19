@@ -22,29 +22,10 @@ _Note: Snapshots requires volumes with FS: Mac OS Extended (Journaled)._
 ```sh
 curl -s https://raw.githubusercontent.com/petrkrejcik/config/master/install.sh | bash
 ```
-1. Login to Google Backup and Sync (to start downloading)
-1. iTerm2
-- Load settings: Preferences -> General -> At bootom _Load preferences from..._
-- `/Users/petr.krejcik/www/config/iterm2`
-1. Lightshot: https://itunes.apple.com/us/app/lightshot-screenshot/id526298438
-1. Laverna:
-- Open from Finder
-- Settings -> Sync -> Dropbox API key
-- Settings -> Transfer Data -> Transfer settings -> Import `~/config/laverna/laverna-settings.json`
-1. Setup Viscosity
-- Load `~/gdrive/backup/dev/Socialbakers-Development.visc`
-- Copy p12 file from Keypass to `/usr` and load it in `PKCS12` dropdown in Coonections -> Authentication
-- Add password from KeyPass Certifikaty -> SB (krejcikp)
-1. Edit `~/.credentials`
-```sh
-export MARATONEC_TOKEN="xxx"`
-```
 1. Run
 ```sh
-$HOME/www/config/setup.sh
+./$HOME/www/config/setup.sh
 ```
-
-
 
 ## Command Line Tools for xCode
 Will be installed automatically with Homebrew
