@@ -2,8 +2,9 @@
 eval "$(ssh-agent -s)"
 
 echo "Generating SSH keys for GitHub"
-read -p "- name the file 'github'"
-read -p "- use password from MacPass -> GitHub SSH"
+read -p "- name the file 'github' (copy entire filepath)"
+read -p "- paste (!using right click + Paste) password from MacPass -> GitHub SSH"
+read -p "- When prompted now for passphrase try hitting Enter without password (to verify empty password)"
 ssh-keygen -o -t rsa -b 4096 -C "github.com"
 ssh-add -K $HOME/.ssh/github
 echo "Copy SSH public key to github.com"
@@ -17,8 +18,9 @@ git remote set-url origin git@github.com:petrkrejcik/config.git
 git push # to trigger login
 
 echo "Generating SSH keys for GitLab"
-read -p "- name the file 'gitlab'"
-read -p "- use password from MacPass -> SBKS - GitLab SSH"
+read -p "- name the file 'gitlab' (copy entire filepath)"
+read -p "- paste (!using right click + Paste) password from MacPass -> SBKS - GitLab SSH"
+read -p "- When prompted now for passphrase try hitting Enter without password (to verify empty password)"
 ssh-keygen -o -t rsa -b 4096 -C "gitlab.com"
 ssh-add -K $HOME/.ssh/gitlab
 echo "Copy SSH public key to gitlab.ccl"
