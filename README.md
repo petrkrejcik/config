@@ -3,7 +3,8 @@
 - remove icons from bottom bar
 - tap without click
 - install sublime packages
-- config repo with perms
+- config repo with access perms
+- Show home in finder
 
 ## Restore Time Machine
 - Hold `Command + R` when booting

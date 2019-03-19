@@ -12,3 +12,5 @@ ln -sf ~/www/config/settings/com.apple.finder.plist ~/Library/Preferences/
 ln -sf ~/www/config/settings/com.google.Chrome.canary.plist ~/Library/Preferences/
 ln -sf ~/www/config/settings/com.google.Chrome.plist ~/Library/Preferences/
 
+# Show only opened apps in Dock
+defaults write com.apple.dock static-only -bool TRUE; killall Dock

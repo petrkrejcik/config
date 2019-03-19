@@ -1,4 +1,4 @@
 #!/bin/sh
 
 brew cask install slack
-open -a slack
+open -a slack &

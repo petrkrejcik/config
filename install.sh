@@ -40,5 +40,5 @@ do
 	:
 	echo "\n"
 	echo "Installing '$app'"
-	test -r "$app/install.sh" && bash "$app/install.sh"
+	test -r "$HOME/www/config/$app/install.sh" && bash "$HOME/www/config/$app/install.sh"
 done

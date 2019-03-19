@@ -3,7 +3,7 @@
 apps=(
 	macpass
 	viscosity
-	# git
+	git
 )
 
 for app in "${apps[@]}"
@@ -11,5 +11,5 @@ do
 	:
 	echo "\n"
 	echo "Setup '$app'"
-	test -r "$app/setup.sh" && bash "$app/setup.sh"
+	test -r "$HOME/www/config/$app/setup.sh" && bash "$HOME/www/config/$app/setup.sh"
 done
