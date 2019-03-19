@@ -5,6 +5,9 @@
 - install sublime packages
 - config repo with access perms
 - Show home in finder
+- cannot find apps after install
+- create sublime projects?
+- symlinking settings to specific version directory is a problem (e.g. `/usr/local/Caskroom/sublime-text/3.200`)
 
 ## Restore Time Machine
 - Hold `Command + R` when booting
