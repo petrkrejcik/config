@@ -27,6 +27,7 @@ ssh-keygen -o -t rsa -b 4096 -C "gitlab.com"
 sleep 3
 ssh-add -K $HOME/.ssh/gitlab
 echo "Copy SSH public key to gitlab.ccl"
+read -p "- login to gitlab.ccl"
 pbcopy < $HOME/.ssh/gitlab.pub
 read -p "- open github.com -> Settings -> SSH keys -> Add key"
 read -p "- name: 'Mac 1', key: cmd + V"

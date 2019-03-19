@@ -8,6 +8,7 @@
 - cannot find apps after install
 - create sublime projects?
 - symlinking settings to specific version directory is a problem (e.g. `/usr/local/Caskroom/sublime-text/3.200`)
+- Phabricator
 
 ## Restore Time Machine
 - Hold `Command + R` when booting

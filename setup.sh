@@ -1,10 +1,12 @@
 #!/bin/sh
 
 apps=(
-	macpass
-	viscosity
-	git
 	system
+	macpass
+	dotfiles
+	viscosity
+	nvm
+	git
 )
 
 for app in "${apps[@]}"
