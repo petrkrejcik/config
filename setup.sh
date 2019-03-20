@@ -8,7 +8,6 @@ apps=(
 	repos # download repos, so symlinking to confg repo is possible from now on
 	dotfiles # links .bash_profile
 	apptivate # requires repos
-	system
 	commander-one
 	git # gitconfig
 	google-chrome
@@ -20,6 +19,7 @@ apps=(
 	spotify
 	sublime-text
 	zoomus
+	system
 	lightshot
 )
 
