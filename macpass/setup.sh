@@ -1,3 +1,6 @@
 #!/bin/sh
 
-read -p "- Log in"
+open -a Macpass &
+
+read -p "- Log in to MacPass"
+

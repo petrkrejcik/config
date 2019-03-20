@@ -1,3 +1,11 @@
+#!/bin/sh
+
+# Settings
+ln -sf ~/www/config/sublime-text/settings.json $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
+
+# Install all packages
+ln -sf $HOME/www/config/sublime-text/packages.json $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package Control.sublime-settings
+
 ln -sf $HOME/www/config/sublime-text/SublimeLinter.sublime-settings $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 ln -sf $HOME/www/config/sublime-text/Word Highlight.sublime-settings $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 
@@ -8,3 +16,5 @@ ln -sf $HOME/www/config/sublime-text/snippet-console-log.sublime-snippet $HOME/L
 ln -sf $HOME/www/config/sublime-text/snippet-debugger.sublime-snippet $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 ln -sf $HOME/www/config/sublime-text/snippet-profile.sublime-snippet $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 ln -sf $HOME/www/config/sublime-text/snippet-stringify.sublime-snippet $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
+
+open -a Sublime\ Text &

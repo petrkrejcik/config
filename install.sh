@@ -15,6 +15,7 @@ git clone git://github.com/petrkrejcik/config.git
 cd config
 
 apps=(
+	apptivate
 	commander-one
 	dotfiles
 	git # TODO
@@ -22,7 +23,7 @@ apps=(
 	google-chrome
 	google-chrome-canary
 	iterm2
-	laverna
+	# laverna
 	macpass
 	node # requires .bash_profile
 	slack
@@ -31,7 +32,6 @@ apps=(
 	sublime-text
 	viscosity
 	zoomus
-	apptivate
 )
 
 for app in "${apps[@]}"
