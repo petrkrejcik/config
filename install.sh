@@ -7,6 +7,7 @@ brew tap caskroom/cask
 brew tap homebrew/cask-versions
 
 # Git
+# this can be done via downloading a ZIP of the repo and move git install into git/install.sh
 brew install git
 mkdir www
 cd www
@@ -16,30 +17,29 @@ cd config
 apps=(
 	commander-one
 	dotfiles
-	git # symlinks
+	git # TODO
 	google-backup-and-sync
 	google-chrome
 	google-chrome-canary
 	iterm2
 	laverna
 	macpass
-	nvm # requires .bash_profile
+	node # requires .bash_profile
 	slack
 	spectacle
 	spotify
 	sublime-text
 	viscosity
 	zoomus
-	apptivate # maybe at the end?
-	system
-	# npm
+	apptivate
 )
 
 for app in "${apps[@]}"
 do
 	:
 	test -r "$HOME/.bash_profile" && source "$HOME/.bash_profile"
-	echo "\n"
 	echo "Installing '$app'"
 	test -r "$HOME/www/config/$app/install.sh" && bash "$HOME/www/config/$app/install.sh"
+	echo ""
+	echo ""
 done

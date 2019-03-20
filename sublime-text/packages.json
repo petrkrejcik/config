@@ -1,0 +1,23 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Babel",
+		"Better CoffeeScript",
+		"BracketHighlighter",
+		"ColorSchemeSelector",
+		"FlowType",
+		"HTML-CSS-JS Prettify",
+		"LESS",
+		"Markdown Extended",
+		"Soy",
+		"SublimeGit",
+		"SublimeLinter",
+		"SublimeLinter-coffeelint",
+		"SublimeLinter-eslint",
+		"WordHighlight"
+	]
+}

@@ -1,13 +1,6 @@
 ## TODO
 - SBKS repos
-- remove icons from bottom bar
-- tap without click
-- install sublime packages
-- config repo with access perms
-- Show home in finder
-- cannot find apps after install
 - create sublime projects?
-- symlinking settings to specific version directory is a problem (e.g. `/usr/local/Caskroom/sublime-text/3.200`)
 - Phabricator
 
 ## Restore Time Machine
