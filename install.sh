@@ -18,14 +18,15 @@ apps=(
 	apptivate
 	commander-one
 	dotfiles
-	git # TODO
+	nvm
+	git # empty: TODO
 	google-backup-and-sync
 	google-chrome
 	google-chrome-canary
 	iterm2
 	# laverna
 	macpass
-	node # requires .bash_profile
+	node # requires nvm; .bash_profile
 	slack
 	spectacle
 	spotify

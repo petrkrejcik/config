@@ -1,7 +1,9 @@
 #!/bin/sh
 
+mkdir -p $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
+
 # Settings
-ln -sf ~/www/config/sublime-text/settings.json $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
+ln -sf $HOME/www/config/sublime-text/settings.json $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
 
 # Install all packages
 ln -sf $HOME/www/config/sublime-text/packages.json $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package Control.sublime-settings

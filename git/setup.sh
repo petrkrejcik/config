@@ -1,4 +1,4 @@
 #!/bin/sh
 
-ln -sf ~/www/config/git/.gitconfig ~/
-ln -sf ~/www/config/git/.gitignore_global ~/
+ln -sf $HOME/www/config/git/.gitconfig $HOME/
+ln -sf $HOME/www/config/git/.gitignore_global $HOME/

@@ -6,13 +6,15 @@
 # Disable 3 finger swipe in Canary
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool FALSE
 
+mkdir -p ~/Library/Preferences/
+
 # Shortcuts
 ln -sf ~/www/config/settings/.GlobalPreferences.plist ~/Library/Preferences/
 ln -sf ~/www/config/settings/com.apple.finder.plist ~/Library/Preferences/
 ln -sf ~/www/config/settings/com.google.Chrome.canary.plist ~/Library/Preferences/
 ln -sf ~/www/config/settings/com.google.Chrome.plist ~/Library/Preferences/
 
-cp $HOME/www/config/system/Czech_Programmers_0.2.keylayout /Library/Keyboard\ Layouts
+sudo cp $HOME/www/config/system/Czech_Programmers_0.2.keylayout /Library/Keyboard\ Layouts
 
 # Show only opened apps in Dock
 defaults write com.apple.dock static-only -bool TRUE; killall Dock

@@ -7,7 +7,7 @@ apps=(
 	node # requires .bash_profile; requires VPN
 	repos # download repos, so symlinking to confg repo is possible from now on
 	dotfiles # links .bash_profile
-	apptivate
+	apptivate # requires repos
 	system
 	commander-one
 	git # gitconfig
