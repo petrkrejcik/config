@@ -2,6 +2,8 @@
 - SBKS repos
 - create sublime projects?
 - Phabricator
+- open app into setup? would make install.sh automatic without need of any interaction
+	- ecxept gdrive?
 
 ## Restore Time Machine
 - Hold `Command + R` when booting
@@ -24,6 +26,7 @@ curl -s https://raw.githubusercontent.com/petrkrejcik/config/master/install.sh |
 Will be installed automatically with Homebrew
 
 ## SBKS
+https://wiki.git.ccl/wiki/development/basic-dev-setup-information.html
 ### git.ccl
 https://git.ccl/profile/personal_access_tokens
 

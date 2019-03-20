@@ -12,12 +12,29 @@ ln -sf ~/www/config/settings/com.apple.finder.plist ~/Library/Preferences/
 ln -sf ~/www/config/settings/com.google.Chrome.canary.plist ~/Library/Preferences/
 ln -sf ~/www/config/settings/com.google.Chrome.plist ~/Library/Preferences/
 
+cp $HOME/www/config/system/Czech_Programmers_0.2.keylayout /Library/Keyboard\ Layouts
+
 # Show only opened apps in Dock
 defaults write com.apple.dock static-only -bool TRUE; killall Dock
 
 # Tap to click is not possible set via command line in High Sierra +
-echo "Set tap to click"
+echo "Trackpad etc"
 read -p "Spotlight: 'trackpad', check 'Tap to click'"
+read -p "More Gestures -> uncheck 'Mission Control, Launchpad, Show Desktop'"
+read -p "Preferences -> Accessibility -> Mouse & Trackpad -> Trackpad Options -> Enable dragging: 'three finger drag'"
+read -p "Preferences -> Accessibility -> Display -> check 'Reduce motion'"
+
+# Keyboard
+read -p "Preferences -> Keyboard -> Keyboard -> check 'Show keyboard and emoji...'"
+read -p "Preferences -> Keyboard -> Text -> uncheck all"
+read -p "Preferences -> Keyboard -> Shortcuts -> uncheck 'Show Desktop, Show Dashboard', ..."
+read -p "Preferences -> Keyboard -> Input Sources -> + -> Czech Programmers, Czech - QWERTY"
+
+# Siri
+read -p "Preferences -> Siri -> disable'"
+
+# Date & Time
+read -p "Preferences -> Date & Time -> Clock -> check 'Show the day of the week'"
 
 # Finder
 echo "Set Finder icons"
