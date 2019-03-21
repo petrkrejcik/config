@@ -26,12 +26,12 @@ apps=(
 	# laverna
 	# macpass
 	node # requires nvm; .bash_profile
-	slack
-	spectacle
-	spotify
-	sublime-text
-	viscosity
-	zoomus
+	# slack
+	# spectacle
+	# spotify
+	# sublime-text
+	# viscosity
+	# zoomus
 )
 
 for app in "${apps[@]}"
