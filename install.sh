@@ -23,7 +23,7 @@ apps=(
 	google-chrome
 	google-chrome-canary
 	iterm2
-	laverna
+	# laverna
 	macpass
 	node # requires nvm; .bash_profile
 	slack

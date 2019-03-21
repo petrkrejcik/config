@@ -1,5 +1,7 @@
 #!/bin/sh
 
+read -p "Change password, you will type it a lot"
+
 apps=(
 	google-backup-and-sync # certs
 	macpass # to have VPN password

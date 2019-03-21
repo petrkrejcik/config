@@ -2,10 +2,9 @@
 eval "$(ssh-agent -s)"
 
 echo "Generating SSH keys for GitHub"
-read -p "- name the file 'github' (copy entire filepath)"
-read -p "- MacPass -> GitHub SSH -> cmd + T"
-ssh-keygen -o -t rsa -b 4096 -C "github.com"
-sleep 5
+read -p "- when prompted paste password from MacPass -> GitHub SSH -> cmd + T <press enter>"
+ssh-keygen -o -t rsa -b 4096 -C "github.com" -f $HOME/.ssh/github
+sleep 3
 ssh-add -K $HOME/.ssh/github
 read -p "- login to github.com <press enter when done>"
 read -p "- github.com -> Settings -> SSH and GPG keys -> New SSH key or Add SSH key <press enter when ready for paste>"
@@ -23,10 +22,9 @@ echo ""
 echo ""
 
 echo "Generating SSH keys for GitLab"
-read -p "- name the file 'gitlab' (copy entire filepath)"
-read -p "- MacPass -> SBKS - GitLab SSH -> cmd + T"
-ssh-keygen -o -t rsa -b 4096 -C "gitlab.com"
-sleep 5
+read -p "- when prompted paste password from MacPass -> SBKS - GitLab SSH -> cmd + T <press enter>"
+ssh-keygen -o -t rsa -b 4096 -C "gitlab.com" -f $HOME/.ssh/gitlab
+sleep 3
 ssh-add -K $HOME/.ssh/gitlab
 read -p "- login to gitlab.ccl <press enter when done>"
 read -p "- open github.com -> Settings -> SSH keys -> Add key <press enter when ready for paste>"

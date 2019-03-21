@@ -1,4 +1,6 @@
 #!/bin/sh
 
+echo ""
 echo "Lightshot:"
-read -p "- install from https://itunes.apple.com/us/app/lightshot-screenshot/id526298438"
+echo "opening https://itunes.apple.com/us/app/lightshot-screenshot/id526298438"
+open -a Google\ Chrome https://itunes.apple.com/us/app/lightshot-screenshot/id526298438 &
