@@ -37,5 +37,6 @@ cd $HOME/www/sbks
 git clone git@git.ccl:builder/builder.git
 cd builder
 npm i
+smrt env save dev
 
 # TODO: mobile

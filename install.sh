@@ -15,6 +15,7 @@ cd config
 
 apps=(
 	apptivate
+	arcanist
 	commander-one
 	dotfiles
 	nvm
@@ -23,6 +24,7 @@ apps=(
 	google-chrome
 	google-chrome-canary
 	iterm2
+	java
 	# laverna
 	macpass
 	node # requires nvm; .bash_profile
