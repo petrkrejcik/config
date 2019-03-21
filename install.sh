@@ -1,4 +1,6 @@
 #!/bin/sh
+touch $HOME/.bash_profile
+mkdir $HOME/.nvm
 
 # Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
