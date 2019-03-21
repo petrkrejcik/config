@@ -38,7 +38,7 @@ apps=(
 for app in "${apps[@]}"
 do
 	:
-	test -r "$HOME/.bash_profile" && source "$HOME/.bash_profile"
+	test -r "$HOME/.bash_profile" && source "$HOME/.bash_profile" && echo "Sourced $HOME/.bash_profile"
 	echo "Installing '$app'"
 	test -r "$HOME/www/config/$app/install.sh" && bash "$HOME/www/config/$app/install.sh"
 	echo ""
