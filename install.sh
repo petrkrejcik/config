@@ -14,24 +14,24 @@ git clone git://github.com/petrkrejcik/config.git
 cd config
 
 apps=(
-	# apptivate
-	# commander-one
+	apptivate
+	commander-one
 	dotfiles
 	nvm
-	# git # empty: TODO
-	# google-backup-and-sync
-	# google-chrome
-	# google-chrome-canary
-	# iterm2
-	# laverna
-	# macpass
+	git # empty: TODO
+	google-backup-and-sync
+	google-chrome
+	google-chrome-canary
+	iterm2
+	laverna
+	macpass
 	node # requires nvm; .bash_profile
-	# slack
-	# spectacle
-	# spotify
-	# sublime-text
-	# viscosity
-	# zoomus
+	slack
+	spectacle
+	spotify
+	sublime-text
+	viscosity
+	zoomus
 )
 
 for app in "${apps[@]}"
