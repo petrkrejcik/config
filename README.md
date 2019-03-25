@@ -1,9 +1,5 @@
 ## TODO
-- SBKS repos
-- create sublime projects?
-- Phabricator
-- open app into setup? would make install.sh automatic without need of any interaction
-	- ecxept gdrive?
+- Phabricator - certifikaty?
 
 ## Restore Time Machine
 - Hold `Command + R` when booting

@@ -3,7 +3,7 @@
 # Screensaver slideshow duration to 30 seconds
 /usr/libexec/PlistBuddy -c "set ':JustASlide:mainDuration' 30" /System/Library/PrivateFrameworks/Slideshows.framework/Versions/A/Resources/Content/EffectDescriptions.plist
 
-# Disable 3 finger swipe in Canary
+# Disable 3 finger swipe in Canary - does not work anymore
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool FALSE
 
 mkdir -p ~/Library/Preferences/
@@ -13,10 +13,6 @@ ln -sf ~/www/config/settings/.GlobalPreferences.plist ~/Library/Preferences/
 ln -sf ~/www/config/settings/com.apple.finder.plist ~/Library/Preferences/
 ln -sf ~/www/config/settings/com.google.Chrome.canary.plist ~/Library/Preferences/
 ln -sf ~/www/config/settings/com.google.Chrome.plist ~/Library/Preferences/
-
-echo ""
-echo "Type sudo password to copy Czech Programmer keyboard"
-sudo cp $HOME/www/config/system/Czech_Programmers_0.2.keylayout /Library/Keyboard\ Layouts
 
 # Show only opened apps in Dock
 defaults write com.apple.dock static-only -bool TRUE; killall Dock
@@ -31,9 +27,13 @@ read -p "Preferences -> Accessibility -> Mouse & Trackpad -> Trackpad Options ->
 
 # Keyboard
 echo ""
+echo "Keyboard"
+echo "Type sudo password to copy Czech Programmer keyboard"
+sudo cp $HOME/www/config/system/Czech_Programmers_0.2.keylayout /Library/Keyboard\ Layouts
 read -p "Preferences -> Keyboard -> Keyboard -> check 'Show keyboard and emoji...'"
 read -p "Preferences -> Keyboard -> Text -> uncheck all"
 read -p "Preferences -> Keyboard -> Shortcuts -> uncheck 'Show Desktop, Show Dashboard', ..."
+read -p "Preferences -> Keyboard -> Shortcuts -> Keyboard -> Move focus to next window"
 read -p "Preferences -> Keyboard -> Input Sources -> + -> Czech Programmers, Czech - QWERTY"
 
 # Siri

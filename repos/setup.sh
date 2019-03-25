@@ -38,5 +38,6 @@ git clone git@git.ccl:builder/builder.git
 cd builder
 npm i
 smrt env save dev
+cp $HOME/www/config/sublime-text/project.sublime-project $HOME/www/sbks/builder.sublime-project
 
 # TODO: mobile

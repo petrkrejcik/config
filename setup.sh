@@ -16,12 +16,12 @@ apps=(
 	google-chrome
 	google-chrome-canary
 	iterm2
-	# laverna
 	slack
 	spectacle
 	spotify
 	sublime-text
 	zoomus
+	joplin
 	system
 	lightshot
 )
