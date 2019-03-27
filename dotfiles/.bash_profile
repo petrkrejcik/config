@@ -1,12 +1,9 @@
 ######################### PATH - START #########################
 # Java
-export JAVA_HOME="/usr/local"
+export JAVA_HOME="" # need to be empty here
 
 # eslint
 export PATH="$HOME/.nvm/versions/node/v8.5.0/bin/eslint:$PATH"
-
-# GDAL
-export PATH="/Library/Frameworks/GDAL.framework/Programs:$PATH"
 
 # Phabricator
 export PATH="$HOME/www/sbks/phabricator/arcanist/bin:$PATH"

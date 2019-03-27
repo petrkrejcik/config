@@ -3,9 +3,6 @@
 # Screensaver slideshow duration to 30 seconds
 /usr/libexec/PlistBuddy -c "set ':JustASlide:mainDuration' 30" /System/Library/PrivateFrameworks/Slideshows.framework/Versions/A/Resources/Content/EffectDescriptions.plist
 
-# Disable 3 finger swipe in Canary - does not work anymore
-defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool FALSE
-
 mkdir -p ~/Library/Preferences/
 
 # Shortcuts
@@ -54,3 +51,9 @@ read -p "3/3 - go home; cmd + J, Show Library Folder"
 echo ""
 echo "Disabling local Time Machine backups"
 read -p "Spotlight: 'time pref'"
+
+# Disable 3 finger swipe in Canary - does not work anymore. Use Preferences -> Trackpak -> More Gestures -> Swipe between pages
+# defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool FALSE
+echo ""
+echo "Back swipe in browser"
+read -p "Preferences -> Trackpak -> More Gestures -> Swipe between pages"
