@@ -1,0 +1,27 @@
+[
+	{ "keys": ["alt+q"], "command": "next_view_in_stack" },
+	{ "keys": ["command+q"], "command": "toggle_status_bar" },
+	{ "keys": ["alt+shift+q"], "command": "prev_view_in_stack" },
+
+	{ "keys": ["super+g"], "command": "find_under" },
+
+	{ "keys": ["shift+super+backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+	{ "keys": ["ctrl+shift+w"], "command": "insert_snippet", "args": { "name": "Packages/User/profile.sublime-snippet" } },
+
+	{ "keys": ["alt+s"], "command": "toggle_status_bar" },
+	{ "keys": ["f1"], "command": "git_status" },
+	{
+		"keys": ["alt+l"],
+		"command": "toggle_setting",
+		"args":
+		{
+		    "setting": "line_numbers"
+		}
+	},
+
+	{ "keys": ["super+shift+minus"], "command": "noop" },
+	{ "keys": ["super+minus"], "command": "toggle_comment", "args": { "block": false } },
+	{ "keys": ["super+shift+equals"], "command": "decrease_font_size" },
+
+	{"keys": ["ctrl+shift+s"], "command": "repl_transfer_current", "args": {"scope": "selection"}}
+]

@@ -23,4 +23,7 @@ ln -sf $HOME/www/config/sublime-text/snippet-debugger.sublime-snippet $HOME/Libr
 ln -sf $HOME/www/config/sublime-text/snippet-profile.sublime-snippet $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 ln -sf $HOME/www/config/sublime-text/snippet-stringify.sublime-snippet $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 
+# Key bindings
+ln -sf $HOME/www/config/sublime-text/user-key-bindings.sublime-keymap $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Default\ (OSX).sublime-keymap
+
 open -a Sublime\ Text &
