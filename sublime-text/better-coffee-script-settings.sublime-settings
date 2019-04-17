@@ -1,0 +1,7 @@
+{
+	/*
+		The directory containing your coffee binary. Usually
+		/usr/local/bin or /usr/bin.
+	*/
+	"binDir": "/usr/bin:node_modules/coffeescript/bin"
+}

@@ -1,5 +1,6 @@
 ## TODO
 - Phabricator - certifikaty?
+- tig
 
 ## Restore Time Machine
 - Hold `Command + R` when booting

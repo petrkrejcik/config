@@ -26,4 +26,7 @@ ln -sf $HOME/www/config/sublime-text/snippet-stringify.sublime-snippet $HOME/Lib
 # Key bindings
 ln -sf $HOME/www/config/sublime-text/user-key-bindings.sublime-keymap $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Default\ \(OSX\).sublime-keymap
 
+# Better CoffeeScript settings
+ln -sf $HOME/www/config/sublime-text/better-coffee-script-settings.sublime-settings $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/CoffeeScript.sublime-settings
+
 open -a Sublime\ Text &
