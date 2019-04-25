@@ -1,6 +1,7 @@
 ## TODO
 - Phabricator - certifikaty?
 - tig
+- vlc `brew cask install vlc`
 
 ## Restore Time Machine
 - Hold `Command + R` when booting
