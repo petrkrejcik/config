@@ -45,6 +45,7 @@
 		"draw_active"
 	],
 	"line_numbers": false,
+	"node_path": "$NVM_BIN",
 	"paths":
 	{
 		"osx":
