@@ -4,5 +4,12 @@
 		"coffeelint": {
 			"excludes": ["*/dev.md"]
 		}
-	}
+	},
+
+    // Provide extra paths to be searched when locating system executables.
+    "paths": {
+        "linux": [],
+        "osx": ["$NVM_BIN"],
+        "windows": []
+    }
 }
