@@ -9,16 +9,23 @@
 		"Better CoffeeScript",
 		"BracketHighlighter",
 		"ColorSchemeSelector",
+		"Cucumber",
 		"FlowType",
+		"Gherkin (Cucumber) Formatter",
 		"HTML-CSS-JS Prettify",
+		"JavaScript Enhancements",
 		"LESS",
 		"Markdown Extended",
 		"Package Control",
 		"Soy",
+		"SublimeCodeIntel",
 		"SublimeGit",
 		"SublimeLinter",
 		"SublimeLinter-coffeelint",
 		"SublimeLinter-eslint",
+		"TerminalView",
+		"tern_for_sublime",
+		"TypeScript Syntax",
 		"WordHighlight"
 	]
 }

@@ -23,5 +23,8 @@
 	{ "keys": ["super+minus"], "command": "toggle_comment", "args": { "block": false } },
 	{ "keys": ["super+shift+equals"], "command": "decrease_font_size" },
 
-	{"keys": ["ctrl+shift+s"], "command": "repl_transfer_current", "args": {"scope": "selection"}}
+	{"keys": ["ctrl+shift+s"], "command": "repl_transfer_current", "args": {"scope": "selection"}},
+
+	{ "keys": ["super+f12"], "command": "flowtype_goto_definition" },
+	{ "keys": ["ctrl+alt+super+space"], "command": "flowtype_view_type" }
 ]

@@ -1,6 +1,17 @@
 {
 	"always_show_minimap_viewport": true,
 	"atomic_save": false,
+	"auto_complete_triggers":
+	[
+		{
+			"characters": "<",
+			"selector": "text.html"
+		},
+		{
+			"characters": ".",
+			"selector": "source.js"
+		}
+	],
 	"binary_file_patterns":
 	[
 		"*.html",
@@ -22,7 +33,9 @@
 		"build/**",
 		"dist/**",
 		"bower_components/**",
-		"vendor/**"
+		"vendor/**",
+		"*.*/bundle.js",
+		"dev.md"
 	],
 	"color_scheme": "Packages/User/Themes/Monokai.tmTheme",
 	"folder_exclude_patterns":
@@ -35,7 +48,12 @@
 	"ignored_packages":
 	[
 		"GitGutter",
+		"JavaScript Enhancements",
 		"NX Sublime Coverage",
+		"SublimeCodeIntel",
+		"SublimeLinter-eslint",
+		"TerminalView",
+		"tern_for_sublime",
 		"Vintage",
 		"Web Inspector"
 	],

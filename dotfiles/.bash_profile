@@ -112,3 +112,9 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+
+######################### ulimit - START #########################
+### To solve error "[Errno 24] Too many open files"
+### Default is 256
+ulimit -n 10000
+######################### ulimit - END #########################

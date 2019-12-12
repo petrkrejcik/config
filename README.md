@@ -2,6 +2,9 @@
 - Phabricator - certifikaty?
 - tig
 - vlc `brew cask install vlc`
+- promennou $HOME/www/config jako PK_CONFIG
+- Udělat ~/.config. Tam nakopiruju vsecgny dotfiles. odtam je nasymlinkuju do repa
+- Vytvořit bash profile Mock pro instalaci nvm
 
 ## Restore Time Machine
 - Hold `Command + R` when booting
