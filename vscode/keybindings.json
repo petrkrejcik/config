@@ -1,0 +1,23 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "alt+q",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.openNextRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "cmd+ctrl+down",
+        "command": "findWordAtCursor.next"
+    },
+    {
+        "key": "cmd+ctrl+up",
+        "command": "findWordAtCursor.previous"
+    },
+    {
+        "key": "ctrl+alt+backspace",
+        "command": "bracketeer.removeBrackets"
+    },
+]

@@ -1,4 +1,8 @@
 ## TODO
+- openVPN
+- remove SBKS stuff
+- homebrew joplin
+- tap cask-cask instead
 - Phabricator - certifikaty?
 - tig
 - vlc `brew cask install vlc`
@@ -10,8 +14,12 @@
 - Hold `Command + R` when booting
 - Restore from TM snapshot
 _Note: If a snapshot is restored via Migration Assistant the installed apps will be kept._
+
 _Note: Spanshot is made on separate partition bacause making just a separate volume in main container is not allowed as a backup._
+
 _Note: Snapshots requires volumes with FS: Mac OS Extended (Journaled)._
+
+_Note: The size of a snapshot is cca 25 GB._
 
 ## Run
 1. Run install

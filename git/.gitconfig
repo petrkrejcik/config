@@ -1,6 +1,6 @@
 [user]
 	name = Petr Krejčík
-	email = petr.krejcik@socialbakers.com
+	email = pkrejcik@soincon.es
 [alias]
   co    = checkout
   ss    = status
@@ -20,6 +20,7 @@
 
 [core]
 	excludesfile = $HOME/.gitignore_global
+	editor = nano
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -28,3 +29,8 @@
 	trustExitCode = true
 [commit]
 	template = $HOME/.stCommitMsg
+[credential]
+	helper = osxkeychain
+
+[filter "tabs2spaces"]
+    smudge = unexpand -t 4

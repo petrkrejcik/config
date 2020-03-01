@@ -5,11 +5,11 @@ read -p "Change password, you will type it a lot"
 apps=(
 	google-backup-and-sync # certs
 	macpass # to have VPN password
-	viscosity # connect VPN
-	java
-	node # requires .bash_profile; requires VPN
-	repos # download repos, so symlinking to confg repo is possible from now on
-	dotfiles # links .bash_profile
+	#viscosity # connect VPN
+	#java
+	#node # requires .bash_profile; requires VPN
+	#repos # download repos, so symlinking to confg repo is possible from now on
+	#dotfiles # links .bash_profile
 	apptivate # requires repos
 	commander-one
 	git # gitconfig
@@ -17,10 +17,10 @@ apps=(
 	google-chrome-canary
 	iterm2
 	slack
-	spectacle
+	#spectacle
 	spotify
 	sublime-text
-	zoomus
+	#zoomus
 	joplin
 	system
 	lightshot
