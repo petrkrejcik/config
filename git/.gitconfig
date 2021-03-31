@@ -2,6 +2,8 @@
 	name = Petr Krejčík
 	email = pkrejcik@soincon.es
 [alias]
+  ci    = commit
+  am    = commit --amend
   co    = checkout
   ss    = status
   s   = !echo git status -sb && git status -sb

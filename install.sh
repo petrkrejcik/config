@@ -15,7 +15,7 @@ cd config
 
 apps=(
 	apptivate
-	arcanist
+	# arcanist
 	commander-one
 	dotfiles
 	nvm
@@ -28,11 +28,11 @@ apps=(
 	macpass
 	node # requires nvm; .bash_profile
 	slack
-	spectacle
+	# spectacle
 	spotify
-	sublime-text
-	viscosity
-	zoomus
+	# sublime-text
+	# viscosity
+	# zoomus
 )
 
 for app in "${apps[@]}"

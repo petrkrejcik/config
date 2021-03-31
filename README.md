@@ -1,9 +1,9 @@
 ## TODO
+- yarn
 - openVPN
 - remove SBKS stuff
 - homebrew joplin
 - tap cask-cask instead
-- Phabricator - certifikaty?
 - tig
 - vlc `brew cask install vlc`
 - promennou $HOME/www/config jako PK_CONFIG

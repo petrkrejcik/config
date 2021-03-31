@@ -31,13 +31,3 @@ read -p "- open github.com -> Settings -> SSH keys -> Add key <press enter when 
 pbcopy < $HOME/.ssh/gitlab.pub
 echo "Copied public key (pbcopy < $HOME/.ssh/gitlab.pub)"
 read -p "- name: 'Mac 1', key: cmd + V"
-
-mkdir $HOME/www/sbks
-cd $HOME/www/sbks
-git clone git@git.ccl:builder/builder.git
-cd builder
-npm i
-smrt env save dev
-cp $HOME/www/config/sublime-text/project.sublime-project $HOME/www/sbks/builder/builder.sublime-project
-
-# TODO: mobile

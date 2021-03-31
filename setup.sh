@@ -19,7 +19,7 @@ apps=(
 	slack
 	#spectacle
 	spotify
-	sublime-text
+	# sublime-text
 	#zoomus
 	joplin
 	system

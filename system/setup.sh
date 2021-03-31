@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Screensaver slideshow duration to 30 seconds
-/usr/libexec/PlistBuddy -c "set ':JustASlide:mainDuration' 30" /System/Library/PrivateFrameworks/Slideshows.framework/Versions/A/Resources/Content/EffectDescriptions.plist
+# /usr/libexec/PlistBuddy -c "set ':JustASlide:mainDuration' 30" /System/Library/PrivateFrameworks/Slideshows.framework/Versions/A/Resources/Content/EffectDescriptions.plist
 
 mkdir -p ~/Library/Preferences/
 
@@ -25,8 +25,8 @@ read -p "Preferences -> Accessibility -> Mouse & Trackpad -> Trackpad Options ->
 # Keyboard
 echo ""
 echo "Keyboard"
-echo "Type sudo password to copy Czech Programmer keyboard"
-sudo cp $HOME/www/config/system/Czech_Programmers_0.2.keylayout /Library/Keyboard\ Layouts
+# echo "Type sudo password to copy Czech Programmer keyboard"
+# sudo cp $HOME/www/config/system/Czech_Programmers_0.2.keylayout /Library/Keyboard\ Layouts
 read -p "Preferences -> Keyboard -> Keyboard -> check 'Show keyboard and emoji...'"
 read -p "Preferences -> Keyboard -> Text -> uncheck all"
 read -p "Preferences -> Keyboard -> Shortcuts -> uncheck 'Show Desktop, Show Dashboard', ..."
