@@ -2,7 +2,7 @@
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update
-brew tap caskroom/cask
+brew tap homebrew/cask
 brew tap homebrew/cask-versions
 
 # Git
