@@ -1,6 +1,6 @@
 #!/bin/sh
 # Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update
 brew tap caskroom/cask
 brew tap homebrew/cask-versions
@@ -26,7 +26,7 @@ apps=(
 	iterm2
 	java
 	macpass
-	node # requires nvm; .bash_profile
+	# node # requires nvm; .bash_profile
 	slack
 	# spectacle
 	spotify
