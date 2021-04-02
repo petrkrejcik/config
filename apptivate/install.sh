@@ -1,3 +1,3 @@
 #!/bin/sh
 
-brew cask install apptivate
+brew install --cask apptivate

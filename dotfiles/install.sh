@@ -1,13 +1,13 @@
 #!/bin/sh
 
-# bash_profile
-touch $HOME/.bash_profile
+# Oh My ZSH
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# NVM
-mkdir $HOME/.nvm
+# ZSH Fuzzy search
+brew install fzf
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
+
 
 # SSH
 mkdir $HOME/.ssh
-
-# Credentials
-touch $HOME/.credentials

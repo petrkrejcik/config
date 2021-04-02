@@ -1,3 +1,3 @@
 #!/bin/sh
 
-brew cask install macpass
+brew install --cask macpass

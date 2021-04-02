@@ -1,3 +1,3 @@
 #!/bin/sh
 
-brew cask install google-chrome-canary
+brew install --cask google-chrome-canary

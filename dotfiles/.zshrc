@@ -1,5 +1,95 @@
+
+alias ll="ls -l"
+alias lla="ls -la"
+alias g="git"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# parse_git_branch() {
+#     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+# }
+
+# COL0="\[\033[0m\]"
+# COL1="\[\033[0;33m\]"
+# COL2="\[\033[1;33m\]"
+# export PS1="$COL1\w $COL2\$(parse_git_branch)$COL0: "
+
+
+# ###-begin-npm-completion-###
+# #
+# # npm command completion script
+# #
+# # Installation: npm completion >> ~/.bashrc  (or ~/.zshrc)
+# # Or, maybe: npm completion > /usr/local/etc/bash_completion.d/npm
+# #
+
+# if type complete &>/dev/null; then
+#   _npm_completion () {
+#     local words cword
+#     if type _get_comp_words_by_ref &>/dev/null; then
+#       _get_comp_words_by_ref -n = -n @ -n : -w words -i cword
+#     else
+#       cword="$COMP_CWORD"
+#       words=("${COMP_WORDS[@]}")
+#     fi
+
+#     local si="$IFS"
+#     IFS=$'\n' COMPREPLY=($(COMP_CWORD="$cword" \
+#                            COMP_LINE="$COMP_LINE" \
+#                            COMP_POINT="$COMP_POINT" \
+#                            npm completion -- "${words[@]}" \
+#                            2>/dev/null)) || return $?
+#     IFS="$si"
+#     if type __ltrim_colon_completions &>/dev/null; then
+#       __ltrim_colon_completions "${words[cword]}"
+#     fi
+#   }
+#   complete -o default -F _npm_completion npm
+# elif type compdef &>/dev/null; then
+#   _npm_completion() {
+#     local si=$IFS
+#     compadd -- $(COMP_CWORD=$((CURRENT-1)) \
+#                  COMP_LINE=$BUFFER \
+#                  COMP_POINT=0 \
+#                  npm completion -- "${words[@]}" \
+#                  2>/dev/null)
+#     IFS=$si
+#   }
+#   compdef _npm_completion npm
+# elif type compctl &>/dev/null; then
+#   _npm_completion () {
+#     local cword line point words si
+#     read -Ac words
+#     read -cn cword
+#     let cword-=1
+#     read -l line
+#     read -ln point
+#     si="$IFS"
+#     IFS=$'\n' reply=($(COMP_CWORD="$cword" \
+#                        COMP_LINE="$line" \
+#                        COMP_POINT="$point" \
+#                        npm completion -- "${words[@]}" \
+#                        2>/dev/null)) || return $?
+#     IFS="$si"
+#   }
+#   compctl -K _npm_completion npm
+# fi
+###-end-npm-completion-###
+
+######################### ulimit - START #########################
+### To solve error "[Errno 24] Too many open files"
+### Default is 256
+ulimit -n 10000
+######################### ulimit - END #########################
+
+######### END of bash_profile
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$NVM_DIR:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/pkrejcik/.oh-my-zsh"
@@ -110,14 +200,9 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-### Android Studio ###
-export ANDROID_SDK=/Users/pkrejcik/Library/Android/sdk
-export PATH=/Users/pkrejcik/Library/Android/sdk:$PATH
-alias emulator="/Users/pkrejcik/Library/Android/sdk/emulator/emulator -avd PIXEL_2_API_29"
-### Android Studio ###
-
 # Added by pedro for autocompletion
-autoload -U compinit && compinit
+# TODO: Causes issues
+# autoload -U compinit && compinit
 
 # Added by pedro for fast cd https://thoughtbot.com/blog/cding-to-frequently-used-directories-in-zsh
 setopt auto_cd

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-brew cask install java
+brew install --cask java

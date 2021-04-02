@@ -1,3 +1,3 @@
 #!/bin/sh
 
-brew cask install spotify
+brew install --cask spotify

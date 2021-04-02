@@ -1,3 +1,3 @@
 #!/bin/sh
 
-brew cask install google-chrome
+brew install --cask google-chrome

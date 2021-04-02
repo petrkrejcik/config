@@ -1,3 +1,3 @@
 #!/bin/sh
 
-brew cask install commander-one
+brew install --cask commander-one
