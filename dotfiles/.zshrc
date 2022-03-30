@@ -1,3 +1,6 @@
+# Fig pre block. Keep at the top of this file.
+export PATH="${PATH}:${HOME}/.local/bin"
+eval "$(fig init zsh pre)"
 
 alias ll="ls -l"
 alias lla="ls -la"
@@ -82,7 +85,7 @@ export NVM_DIR="$HOME/.nvm"
 ######################### ulimit - START #########################
 ### To solve error "[Errno 24] Too many open files"
 ### Default is 256
-ulimit -n 10000
+ulimit -n 1000
 ######################### ulimit - END #########################
 
 ######### END of bash_profile
@@ -98,7 +101,8 @@ export ZSH="/Users/pkrejcik/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="af-magic"
+
+ZSH_THEME="fwalch"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -159,13 +163,14 @@ ZSH_THEME="af-magic"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git
+    # git
     colored-man-pages
     colorize
     common-aliases # l, la, zshrc
     vscode
-    nvm
-    zsh-completions
+    # nvm
+    # zsh-completions
+    # nx-completion
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -202,12 +207,44 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Added by pedro for autocompletion
 # TODO: Causes issues
-# autoload -U compinit && compinit
+autoload -U compinit && compinit
 
 # Added by pedro for fast cd https://thoughtbot.com/blog/cding-to-frequently-used-directories-in-zsh
 setopt auto_cd
 cdpath=($HOME/www/soincon/ $HOME/www/soincon/emi)
 
 alias flush-dns="killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache"
+alias yarn-linked="find . -type l | grep -v .bin | sed 's/^\.\/node_modules\///'" 
+alias yarn-unlink-all="yarn-linked | xargs yarn unlink && yarn install --check-files"
 
+# Fuzzy search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+
+# Automatic change of node version based on .nvmrc in a directory
+# autoload -U add-zsh-hook
+# load-nvmrc() {
+#   if [[ -f .nvmrc && -r .nvmrc ]]; then
+#     nvm use
+#   elif [[ $(nvm version) != $(nvm version default)  ]]; then
+#     echo "Reverting to nvm default version"
+#     nvm use default
+#   fi
+# }
+# add-zsh-hook chpwd load-nvmrc
+# load-nvmrc
+# END - Automatic change of node version based on .nvmrc in a directory
+
+
+
+
+##### Android Studio - petrk
+export ANDROID_SDK="/Users/pkrejcik/Library/Android/sdk"
+export PATH="/Users/pkrejcik/Library/Android/sdk:$PATH"
+##### FIN Android Studio - petrk
+
+# Fig post block. Keep at the bottom of this file.
+eval "$(fig init zsh post)"
+
